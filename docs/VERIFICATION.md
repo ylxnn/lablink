@@ -19,7 +19,7 @@
 
 - PostgreSQL 的真实行锁、排他约束、多进程争抢与迁移；当前只有代码、迁移和部署配置。
 - 容器镜像完整构建与容器启动。
-- GitHub Actions 云端执行；工作流已编写，本地执行了对应 Python/前端检查。
+- GitHub Actions 首次主分支检查已在云端通过：依赖安装、后端测试、静态检查与前端构建。
 - 外部通知、真实高校账号、真实设备使用与生产流量。
 
 已知测试工具提示：Starlette TestClient 使用的 AnyIO 别名有一条弃用警告，测试不因此失败。发布前应在锁定依赖升级时复核。
@@ -40,3 +40,5 @@
 - 从发布源码 ZIP 解压到独立目录后，重新执行 `uv sync --frozen`、30 项测试、Ruff、`npm ci` 和生产构建，均通过。
 - README 截图由独立合成数据实例重新生成，不包含当前账号的个人资料或浏览器验收记录。
 - GitHub 发布分支使用独立根提交，上游代码来源固定到 PROVENANCE 中的提交；原模板历史留在本地 `upstream-template` 分支，不随发布分支上传。
+
+首次公开发布已完成：https://github.com/ylxnn/lablink 。首次主分支 CI：https://github.com/ylxnn/lablink/actions/runs/41759079422 。常规依赖升级 PR 默认为关闭，避免初始化时产生大量无关变更；需要时可调整 Dependabot 配额。
