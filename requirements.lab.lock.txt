@@ -21,7 +21,7 @@ iniconfig==2.3.0
 mako==1.4.2
 markupsafe==3.0.3
 packaging==26.2
-pluggy==1.6.0
+pluggy==1.7.0
 psycopg==3.2.13
 psycopg-binary==3.2.13 ; implementation_name != 'pypy'
 pwdlib==0.3.1
