@@ -11,7 +11,7 @@ jobs:
       - run: pip install -r requirements.lab.lock.txt
       - run: python -m pytest tests --cov=app.lab --cov-report=term-missing
       - run: python -m ruff check backend/app/lab backend/app/main.py tests --select F
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: '22'
       - run: cd frontend && npm ci --workspaces=false && npm run build
