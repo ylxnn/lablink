@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: lablink
+      POSTGRES_DB: lablink
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+    volumes:
+      - lablink-db:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U lablink -d lablink']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.lab
+    ports:
+      - '127.0.0.1:42112:8000'
+    environment:
+      DATABASE_URL: postgresql+psycopg://lablink:${POSTGRES_PASSWORD}@db:5432/lablink
+      SECRET_KEY: ${SECRET_KEY:?set SECRET_KEY}
+      APP_ENV: production
+      SEED_DEMO: 'false'
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  lablink-db:

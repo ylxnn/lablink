@@ -1,0 +1,4 @@
+[tool.uv.workspace]
+members = ["backend"]
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "ruff>=0.14,<1"]

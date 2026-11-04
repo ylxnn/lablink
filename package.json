@@ -1,0 +1,1 @@
+{"name":"lablink","private":true,"workspaces":["frontend"],"scripts":{"build":"npm run build --workspace frontend","dev":"npm run dev --workspace frontend"}}

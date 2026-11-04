@@ -1,0 +1,15 @@
+.git
+.local
+.venv
+**/__pycache__
+**/node_modules
+.pytest_cache
+.ruff_cache
+.env
+.env.*
+**/.env
+backend/app/frontend
+docs
+tests
+.release
+release

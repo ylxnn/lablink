@@ -1,0 +1,30 @@
+# Local configuration and data
+.env
+.env.*
+!.env.lab.example
+.local/
+.venv/
+venv/
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+# Frontend dependencies / build / browser output
+node_modules/
+backend/app/frontend/
+frontend/dist/
+playwright-report/
+test-results/
+blob-report/
+# Editor, logs and release artifacts
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+.release/
+release/
