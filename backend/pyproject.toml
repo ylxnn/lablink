@@ -3,7 +3,7 @@ name = "lablink-backend"
 version = "1.0.0"
 description = "Laboratory equipment booking and collaboration platform"
 requires-python = ">=3.12,<3.14"
-dependencies = ["fastapi>=0.115,<0.120", "uvicorn>=0.31,<0.36", "sqlmodel>=0.0.24,<0.0.28", "pydantic-settings>=2.6,<3", "pyjwt>=2.10,<3", "pwdlib[argon2,bcrypt]>=0.2,<0.4", "email-validator>=2.2,<3", "psycopg[binary]>=3.2,<3.3", "alembic>=1.14,<1.17", "httpx>=0.28,<0.29"]
+dependencies = ["fastapi>=0.162.0,<0.163", "uvicorn>=0.31,<0.36", "sqlmodel>=0.0.24,<0.0.28", "pydantic-settings>=2.6,<3", "pyjwt>=2.10,<3", "pwdlib[argon2,bcrypt]>=0.2,<0.4", "email-validator>=2.2,<3", "psycopg[binary]>=3.2,<3.3", "alembic>=1.14,<1.17", "httpx>=0.28,<0.29"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
